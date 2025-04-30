@@ -15,7 +15,7 @@ async function fetchPokemonData(pokemonId){
 function displayPokemon(pokemon){
    const pokemonCard=document.createElement("div")
     pokemonCard.classList.add("pokemon-card")
-    console.log(pokemon.sprites.front_shiny)
+    console.log(pokemon.sprites.front)
     pokemonCard.innerHTML=`
    <h2>${pokemon.id}</h2>
     <img src="${pokemon.sprites.front_shiny}" alt="imagen de${pokemon.name}">
@@ -26,9 +26,11 @@ function displayPokemon(pokemon){
   pokemonList.appendChild(pokemonCard)
 }
 async function loadpokdex(){
-    const pokemon= await fetchPokemonData(4)
+ for(let i=1;i<=52;i++){  
+    const pokemon= await fetchPokemonData(i)
     console.log(pokemon)
     displayPokemon(pokemon)
+}
 }
 
 loadpokdex()
