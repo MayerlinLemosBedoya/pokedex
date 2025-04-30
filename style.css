@@ -35,3 +35,13 @@ body{
         grid-template-columns: repeat(3,1fr);
     }
 }
+#pokemonDetail{
+    display: flex;
+    flex-direction: column;
+}
+.grass{
+   border:1px solid green 
+}
+.fire{
+    border:1px solid red 
+}
