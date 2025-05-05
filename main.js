@@ -61,3 +61,5 @@ async function loadpokdex(){
 }
 
 loadpokdex()
+var container = document.getElementById(backtoPokedexBtn);
+backtoPokedexBtn.innerHTML = '<img src=Grass.jpg>'; 
